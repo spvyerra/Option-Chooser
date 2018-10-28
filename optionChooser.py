@@ -8,14 +8,17 @@ for i in range(numOptions):
     options.append(input("Option: "))
 
 
-while True:
-    choice = randint(0, len(options) - 1)    
-    
-    print("Do " + options[choice])
+def randChoice(list):
+    loops = randint(1, randint(1, 100))
+    choice = []
 
-    again = input("Go again? ")
-    
-    if (again == "Y"):
-        continue
+    for i in range(loops):
+        choice.append(randint(0, len(list) - 1))
 
-    break
+    print("Do " + list[choice[randint(0, loops - 1)]])
+
+    if (input("Go Again: ") == "Y"):
+        return randChoice(list)
+
+
+randChoice(options)
