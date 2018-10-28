@@ -10,12 +10,11 @@ for i in range(numOptions):
 
 def randChoice(list):
     loops = randint(1, randint(1, 100))
-    choice = []
 
-    for i in range(loops):
-        choice.append(randint(0, len(list) - 1))
+    for _ in range(loops):
+        choice = randint(0, len(list) - 1)
 
-    print("Do " + list[choice[randint(0, loops - 1)]])
+    print("Do " + list[choice])
 
     if (input("Go Again: ") == "Y"):
         return randChoice(list)
