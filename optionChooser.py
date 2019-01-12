@@ -11,7 +11,7 @@ for i in range(numOptions):
 def randChoice(list):
     loops = randint(1, randint(1, 100))
 
-    for _ in range(loops):
+    for i in range(loops):
         choice = randint(0, len(list) - 1)
 
     print("Do " + list[choice])
