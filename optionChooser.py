@@ -1,17 +1,21 @@
 from random import randint
 
-numOptions = int(input("How mant options do you have: "))
-
 options = []
+tmpOption = ""
 
-for i in range(numOptions):
-    options.append(input("Option: "))
+while True:
+    tmpOption = input("Option: ")
+
+    if (tmpOption == ""):
+        break
+
+    options.append(tmpOption)
 
 
 def randChoice(list):
     loops = randint(1, randint(1, 100))
 
-    for i in range(loops):
+    for _ in range(loops):
         choice = randint(0, len(list) - 1)
 
     print("Do " + list[choice])
